@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sky Montería Vapes</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .gris { color: lightgray; }
+    .rojo { color: red; }
+
+    /* Eslogan */
+    .eslogan {
+      text-align: center;
+      font-size: 18px;
+      margin: 15px;
+      color: #ff9800;
+    }
+
+    /* Restricciones */
+    .restricciones {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 15px;
+      background: #1e1e1e;
+      border-radius: 15px;
+      text-align: center;
+    }
+    .restricciones p {
+      margin-bottom: 10px;
+    }
+    .iconos {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .iconos img {
+      width: 80px;
+      background: white;
+      border-radius: 10px;
+      padding: 5px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.5);
+    }
+
+    /* Productos */
+    .productos {
+      padding: 20px;
+      text-align: center;
+    }
+    .productos h2 {
+      margin-bottom: 20px;
+      color: #ff9800;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 8px rgba(255,255,255,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+    .precio {
+      color: #4caf50;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    /* Contador */
+    .counter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .counter button {
+      width: 30px;
+      height: 30px;
+      border: none;
+      border-radius: 50%;
+      background: #ff9800;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .counter span {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    /* Botón global */
+    #openCart {
+      display: block;
+      margin: 30px auto;
+      padding: 12px 20px;
+      background: #ff9800;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 600px;
+      color: white;
+    }
+    .modal-content h2 {
+      text-align: center;
+      color: #ff9800;
+    }
+    .modal-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    .modal-content th, .modal-content td {
+      border: 1px solid #444;
+      padding: 8px;
+      text-align: center;
+    }
+    #checkoutBtn {
+      background: #ff9800;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      display: block;
+      margin: 10px auto;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #closeModal {
+      background: red;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      float: right;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background: #222;
+      border-radius: 25px 25px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- ENCABEZADO -->
+  <header class="encabezado">
+    <h1>
+      <span class="gris">Sky</span>
+      <span class="rojo">Vapes Montería</span>
+    </h1>
+  </header>
+
+  <!-- Eslogan -->
+  <p class="eslogan">
+    ¡<span class="gris">Sky</span> <span class="rojo">Vape Montería</span> donde el sabor llega hasta las nubes!
+  </p>
+
+  <!-- Restricciones -->
+  <div class="restricciones">
+    <p>
+      Sky Vapes Montería es un espacio dedicado a ofrecer experiencias de vapeo innovadoras con una amplia variedad de sabores frutales, mentolados y tropicales. Nuestro objetivo es brindar calidad, estilo y frescura en cada dispositivo, siempre promoviendo el consumo responsable y exclusivo para adultos mayores de 18 años.
+    </p>
+    <div class="iconos">
+      <img src="https://png.pngtree.com/png-clipart/20221022/original/pngtree-prohibited-18-symbols-png-image_8713586.png" alt="Prohibido menores de 18" title="Prohibido menores de 18">
+      <img src="https://st.depositphotos.com/26729766/57507/v/950/depositphotos_575073914-stock-illustration-pregnant-woman-prohibited-sign-red.jpg" alt="Prohibido embarazadas" title="Prohibido embarazadas">
+    </div>
+  </div>
+
+  <!-- PRODUCTOS -->
+  <section class="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid">
+
+      <!-- 🔥 Aquí van los 10 productos con contadores (los que ya te pasé) -->
+      <!-- Producto 1 -->
+<div class="card" 
+     data-name="Triple Mango" 
+     data-price="25000" 
+     data-desc="Un sabor tropical intenso con dulzura natural. Duración: hasta 15,000 puffs.">
+  <img src="https://smokespotvape.com/cdn/shop/files/triple-mango-smok-priv-bar-turbo-15000-ssv-1.png?v=1706129884&width=500" alt="Triple Mango">
+  <h3>Triple Mango</h3>
+  <p><em>Sabor tropical intenso</em> con dulzura natural. Hasta 15,000 caladas.</p>
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 2 -->
+<div class="card" 
+     data-name="Menta Refrescante" 
+     data-price="25000" 
+     data-desc="Un toque fresco y helado que energiza en cada inhalación. Duración: hasta 15,000 puffs.">
+  <img src="https://www.vapezilla.com/cdn/shop/files/Priv-Bar-Disposable-Vape-Alaskan-Mint.png?v=1708332843&width=500" alt="Menta Refrescante">
+  <h3>Menta Refrescante</h3>
+  <p><em>Un toque fresco y helado</em> que energiza en cada inhalación. Hasta 15,000 caladas.</p>
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 3 -->
+<div class="card" 
+     data-name="Dulce Caramelo" 
+     data-price="25000" 
+     data-desc="Sabor goloso y suave, ideal para los amantes de los dulces. Duración: hasta 15,000 puffs.">
+  <img src="https://tse3.mm.bing.net/th/id/OIP.r9Szd1UosJ10vNZdM7aaHgHaHa?pid=Api&P=0&h=500" alt="Dulce Caramelo">
+  <h3>Dulce Caramelo</h3>
+  <p><em>Sabor goloso y suave</em>, ideal para los amantes de los dulces. Hasta 15,000 caladas.</p>
+  
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 4 -->
+<div class="card" 
+     data-name="Tabaco Clásico" 
+     data-price="25000" 
+     data-desc="Sabor robusto y tradicional, ideal para quienes prefieren lo clásico. Duración: hasta 15,000 puffs.">
+  <img src="https://cdn11.bigcommerce.com/s-n38pmt68o2/products/5354/images/28535/smok-priv-bar-turbo-15000-puff-disposable__59326.1721851403.386.513.jpg?c=2" alt="Tabaco Clásico">
+  <h3>Tabaco Clásico</h3>
+  <p><em>Sabor robusto y tradicional</em>, ideal para quienes prefieren lo clásico. Hasta 15,000 caladas.</p>
+ 
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 5 -->
+<div class="card" 
+     data-name="Blue Razz Lemon" 
+     data-price="25000" 
+     data-desc="Mezcla dulce y ácida de frambuesa azul con un toque cítrico de limón. Duración: hasta 15,000 puffs.">
+  <img src="https://tse2.mm.bing.net/th/id/OIP._hI7k6HvwbAT6MuEX0jUTwHaHa?pid=Api&P=0&h=500" alt="Blue Razz Lemon">
+  <h3>Blue Razz Lemon</h3>
+
+  <p><em>Mezcla dulce y ácida de frambuesa azul</em> con un toque cítrico de limón. Hasta 15,000 caladas.</p>
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 6 -->
+<div class="card" 
+     data-name="Blackberry Peach Lemon" 
+     data-price="25000" 
+     data-desc="Una fusión exótica de mora, durazno jugoso y limón ácido. Duración: hasta 15,000 puffs.">
+  <img src="https://vaphoy.com/wp-content/uploads/2025/02/PB_BKACBERRYPEACHLEMON.jpg" alt="Blackberry Peach Lemon">
+  <h3>Blackberry Peach Lemon</h3>
+  <p><em>Una fusión exótica de mora, durazno jugoso y limón ácido.</em> Hasta 15,000 caladas.</p>
+  
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 7 -->
+<div class="card" 
+     data-name="Paraíso de Cereza" 
+     data-price="25000" 
+     data-desc="Cereza madura con un toque tropical para quienes disfrutan sabores frutales. Duración: hasta 15,000 puffs.">
+  <img src="https://mipod.com/cdn/shop/files/Priv-Bar_Cherry-Paradise_Render_600x600_21326ea4-86d7-49bb-b9fd-d3db5b47bd09_800x.png?v=1703796290" alt="Paraíso de Cereza">
+  <h3>Paraíso de Cereza</h3>
+  <p><em>Cereza madura con un toque tropical</em> para quienes disfrutan sabores frutales. Hasta 15,000 caladas.</p>
+ 
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 8 -->
+<div class="card" 
+     data-name="Limonada Cerezada" 
+     data-price="25000" 
+     data-desc="Inspirado en la limonada clásica con un toque dulce de cereza. Duración: hasta 15,000 puffs.">
+  <img src="https://vaphoy.com/wp-content/uploads/2025/02/PB_DRCHERRY.jpg" alt="Limonada Cerezada">
+  <h3>Limonada Cerezada</h3>
+  <p><em>Inspirado en la limonada clásica</em> con un toque dulce de cereza. Hasta 15,000 caladas.</p>  
+  
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 9 -->
+<div class="card" 
+     data-name="Limonada de Florida" 
+     data-price="25000" 
+     data-desc="Refrescante y jugoso sabor con notas de frutas cítricas. Duración: hasta 15,000 puffs.">
+  <img src="https://fenixstore.com.co/wp-content/uploads/2024/09/smok-priv-bar-turbo-Florida-Lemonade-flavor-disposable-vape-6.jpeg" alt="Limonada de Florida">
+  <h3>Limonada de Florida</h3>
+  <p><em>Refrescante y jugoso sabor</em> con notas de frutas cítricas. Hasta 15,000 caladas.</p>
+  
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+</div>
+
+<!-- Producto 10 -->
+<div class="card" 
+     data-name="Fresa Mentolado" 
+     data-price="25000" 
+     data-desc="Fresa dulce con un toque refrescante de menta y final caramelizado. Duración: hasta 15,000 puffs.">
+  <img src="https://mipod.com/cdn/shop/files/Priv-Bar_Strawberry-Mint-Candy_Render_600x600_9837756e-9499-49b5-93c2-fc826141a82f_800x.png?v=1703796363" alt="Fresa Mentolado">
+  <h3>Fresa Mentolado</h3>
+  <p><em>Fresa dulce con un toque refrescante de menta</em> y final caramelizado. Hasta 15,000 caladas.</p>
+  
+  <p class="precio-original">$28.000 COP</p>
+  <p class="precio-descuento">$25.000 COP</p>
+  <div class="counter">
+    <button class="minus">-</button>
+    <span class="cantidad">0</span>
+    <button class="plus">+</button>
+  </div>
+    </div>
+  </section>
+
+  
+  <!-- Botón global -->
+  <button id="openCart">🛒 Ver Carrito / Comprar</button>
+
+  <!-- Modal -->
+  <div id="cartModal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal">X</button>
+      <h2>Tu Carrito</h2>
+      <table>
+        <thead>
+          <tr><th>Producto</th><th>Cantidad</th><th>Precio</th><th>Total</th></tr>
+        </thead>
+        <tbody id="cartBody"></tbody>
+      </table>
+      <h3 id="cartTotal">Total: $0 COP</h3>
+      <button id="checkoutBtn">Finalizar compra</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Sky Montería Vapes © 2025 • Desarrollado en Visual Studio Code</p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    const productos = document.querySelectorAll('.card');
+    const cartModal = document.getElementById('cartModal');
+    const cartBody = document.getElementById('cartBody');
+    const cartTotal = document.getElementById('cartTotal');
+    const openCart = document.getElementById('openCart');
+    const closeModal = document.getElementById('closeModal');
+    const checkoutBtn = document.getElementById('checkoutBtn');
+
+    // manejar contador
+    productos.forEach(card => {
+      const minus = card.querySelector('.minus');
+      const plus = card.querySelector('.plus');
+      const cantidad = card.querySelector('.cantidad');
+
+      minus.addEventListener('click', () => {
+        let num = parseInt(cantidad.textContent);
+        if(num > 0) cantidad.textContent = num - 1;
+      });
+
+      plus.addEventListener('click', () => {
+        let num = parseInt(cantidad.textContent);
+        cantidad.textContent = num + 1;
+      });
+    });
+
+    // abrir modal
+    openCart.addEventListener('click', () => {
+      actualizarCarrito();
+      cartModal.style.display = 'flex';
+    });
+
+    // cerrar modal
+    closeModal.addEventListener('click', () => {
+      cartModal.style.display = 'none';
+    });
+
+    // actualizar carrito en modal
+    function actualizarCarrito() {
+      cartBody.innerHTML = "";
+      let total = 0;
+
+      productos.forEach(card => {
+        const name = card.dataset.name;
+        const price = parseInt(card.dataset.price);
+        const cantidad = parseInt(card.querySelector('.cantidad').textContent);
+
+        if(cantidad > 0){
+          let row = `
+            <tr>
+              <td>${name}</td>
+              <td>${cantidad}</td>
+              <td>$${price} COP</td>
+              <td>$${price * cantidad} COP</td>
+            </tr>
+          `;
+          cartBody.innerHTML += row;
+          total += price * cantidad;
+        }
+      });
+
+      cartTotal.textContent = "Total: $" + total + " COP";
+    }
+
+    // finalizar compra (enviar a whatsapp)
+    checkoutBtn.addEventListener('click', () => {
+      let mensaje = "🛒 Pedido Sky Vapes Montería:%0A";
+      productos.forEach(card => {
+        const name = card.dataset.name;
+        const price = parseInt(card.dataset.price);
+        const cantidad = parseInt(card.querySelector('.cantidad').textContent);
+
+        if(cantidad > 0){
+          mensaje += `- ${name} x${cantidad} = $${price * cantidad} COP%0A`;
+        }
+      });
+
+      let numero = "573104433445"; // <- tu número de WhatsApp
+      let url = `https://wa.me/${numero}?text=${mensaje}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+
+ <!-- ENLACE EXTERNO -->
+  <section class="contacto">
+    <h2>Contáctanos</h2>
+    <p>
+      Síguenos en nuestras redes sociales:  
+      <a href="https://www.instagram.com/" target="_blank">sky_monteria</a>
+    </p>
+    <img src="img/QR sky.jpg.png" alt="" style="font-size:60px; width:150px;">
+  </section>
+
+</html>
